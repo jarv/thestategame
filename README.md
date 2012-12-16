@@ -1,5 +1,8 @@
-thestategame.com
-================
+thestategame
+============
+
+A javascript / canvas program with a simple
+Flask application to track high scores.
 
 Play Here - http://jarv.github.com/thestategame/
 
