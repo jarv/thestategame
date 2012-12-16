@@ -1,6 +1,8 @@
 thestategame.com
 ================
 
+Play Here - http://jarv.github.com/thestategame/
+
 Installation / Running the development server
 ---------------------------------------------
 
