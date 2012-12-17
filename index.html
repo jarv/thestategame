@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf8">
+    <title>The State Game</title>
+    <script type="text/javascript" src="jquery-latest.min.js"></script>
+    <script type="text/javascript" src="jquery.imagesloaded.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="game.css"> 
+    <script type="text/javascript" src="game.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-78464-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </head>
+  <body >
+    <div id="content">
+      <canvas id="map" width="700" height="700">
+             Your browser does not support HTML5 Canvas.
+      </canvas>
+      <canvas id="test" width="700" height="700">
+             Your browser does not support HTML5 Canvas.
+             </canvas>
+     <div id ="loading"></div>
+      <div id="hs">
+         <div id="heading">Game Over</div>
+         <div id="newhs">
+             Congratulations, you have a new highscore!!<br />
+            <input type=text required pattern="[A-Z0-9a-z\s]{3,20}"
+                id="input" placeholder="Enter your name"> 
+            <div id="response"> </div>
+        </div>
+        <div id="hstable">
+        </div>
+        <span style="text-align:center">High score table is reset every 24h<br /><a href="/static/index.html">Play again</a></span>
+      </div>
+     </div>
+   </body>
+ </html>
