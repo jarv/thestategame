@@ -5,31 +5,19 @@ from contextlib import closing
 import json
 import re
 
-DIR = os.path.dirname(__file__)
-DATABASE = os.path.join(DIR, 'hs.db')
-DEBUG = True
+DATABASE = os.path.join('/tmp/hs.db')
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-
-if app.config['DEBUG']:
-    from werkzeug import SharedDataMiddleware
-    import os
-    app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
-        "/": os.path.join(DIR, 'static')
-    })
-
 
 @app.before_request
 def before_request():
     g.db = connect_db()
 
-
 @app.teardown_request
 def teardown_request(exception):
     if hasattr(g, 'db'):
         g.db.close()
-
 
 @app.route('/d', methods=['GET'])
 def get_scores():
@@ -60,7 +48,6 @@ def post_score():
 
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
-
 
 def init_db():
     with closing(connect_db()) as db:
