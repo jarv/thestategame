@@ -90,7 +90,7 @@ var game = {
       game.t = $('#test')[0];
       game.ctx_t = game.t.getContext('2d');
 
-      game.round_time = 10;  // seconds per round
+      game.round_time = 1;  // seconds per round
       // placements of states
       // when round starts
 
