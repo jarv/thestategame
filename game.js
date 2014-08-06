@@ -642,7 +642,7 @@ var game = {
 
     function updateHS() {
       $.ajax({
-          url: '/d',
+          url: 'hs.stategame.jarv.org/d',
           cache: 'false',
           dataType: 'json',
           type: 'get',
@@ -680,7 +680,7 @@ var game = {
           $('#input').prop("disabled", true);
           n = $('#input').val();
           $.ajax({
-                  url: '/d',
+                  url: 'hs.stategame.jarv.org/d',
                   cache: 'false',
                   dataType: 'json',
                   type: 'post',
