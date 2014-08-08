@@ -6,3 +6,4 @@ ghp-import==0.4.1
 ipython==0.13.1
 uWSGI==2.0.6
 wsgiref==0.1.2
+newrelic==2.24.0.21
