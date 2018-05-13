@@ -4,7 +4,7 @@ thestategame
 A javascript / canvas program with a simple
 Flask application to track high scores.
 
-Play Here - http://jarv.github.com/thestategame/
+Play Here - https://jarv.github.io/thestategame/
 
 Installation / Running the development server
 ---------------------------------------------
